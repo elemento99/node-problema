@@ -1,0 +1,60 @@
+<h1>CRUD de archivos</h1>
+
+
+{{#if error}}
+<div class="alert alert-danger">
+    {{error}}
+
+</div>
+{{/if}}
+
+{{#if sucess}}
+<div class="alert alert-sucess"></div>
+    {{sucess}}
+</div>
+{{/if}}
+
+
+
+  <h3>Crear un archivo</h3>
+    <form action="/archivos/crear" method="POST">
+      <div class="form-group">
+        Nombre del archivo
+        <input name="archivo" class="form-control" id="archivo" />
+      </div>
+      <div class="form-group">
+        Contenido
+        <textarea name="contenido" class="form-control"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-2">Crear archivo</button>
+    </form>
+   
+   
+    <h3 class ="mt-5">Leer un archivo</h3>
+    <form action="/archivos/leer" method="GET">
+      <div class="form-group">
+        Nombre del archivo
+        <input name="archivo" class="form-control" id="archivo" />
+      </div>
+
+      <button type="submit" class="btn btn-info">Consultar archivo</button>
+    </form>
+  </div>
+      
+
+<h3>Renombrar un archivo</h3>
+<form action="/archivos/renombrar" method="POST">
+  <div class="form-group">
+    Nombre del archivo
+    <input name="nombre" class="form-control" id="archivo" />
+  </div>
+  <div class="form-group">
+    Nuevo nombre del archivo
+    <input name="nuevoNombre" class="form-control" id="archivo" />
+  </div>
+
+  <button type="submit" class="btn btn-warning">Renombrar archivo</button>
+</form>
+
+  
